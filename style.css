@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.shape-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 5px;
+    background-color: bisque;
+}
+
+.shape-item {
+    width: 50px;
+    height: 50px;
+}
+
+.circle {
+    background-color: brown;
+    border-radius: 50%;
+}
+
+.square {
+    background-color: black;
+}
+
+.oval {
+    background-color: blueviolet;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid blue;
+}
+
+
+
