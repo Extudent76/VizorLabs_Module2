@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK-2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="violations">
+        <section class="violations__header">
+            <h1 class="violations__title">Нарушения</h1>
+            <nav class="violations__tabs">
+                <a href="#" class="violations__tab">Час</a>
+                <a href="#" class="violations__tab violations__tab--active">День</a>
+                <a href="#" class="violations__tab">Неделя</a>
+                <a href="#" class="violations__tab">Месяц</a>
+                <a href="#" class="violations__tab">Год</a>
+            </nav>
+        </section>
+        <section class="violations__chart-container">
+            <div class="violations__chart">
+                <div class="violations__chart-center">
+                    <div class="violations__total">24774</div>
+                    <div class="violations__label">всего событий</div>
+                </div>
+            </div>
+        </section>
+        <section class="violations__legend">
+            <div class="violations__legend-item">
+                <div class="violations__color violations__color--unauthorized-access"></div>
+                <div class="violations__text">Несанкционированный доступ</div>
+                <div class="violations__count">7937</div>
+                <div class="violations__percent violations__percent--unauthorized-access">32%</div>
+            </div>
+            <div class="violations__legend-item">
+                <div class="violations__color violations__color--license-plate"></div>
+                <div class="violations__text">Номерной Знак</div>
+                <div class="violations__count">7412</div>
+                <div class="violations__percent violations__percent--license-plate">30%</div>
+            </div>
+            <div class="violations__legend-item">
+                <div class="violations__color violations__color--cap"></div>
+                <div class="violations__text">Чепчик (Нарушение)</div>
+                <div class="violations__count">4194</div>
+                <div class="violations__percent violations__percent--cap">17%</div>
+            </div>
+            <div class="violations__legend-item">
+                <div class="violations__color violations__color--helmet"></div>
+                <div class="violations__text">Каска (нарушение)</div>
+                <div class="violations__count">1876</div>
+                <div class="violations__percent violations__percent--helmet">8%</div>
+            </div>
+            <div class="violations__legend-item">
+                <div class="violations__color violations__color--improper-clothing"></div>
+                <div class="violations__text">Неподходящий тип спецодежды</div>
+                <div class="violations__count">954</div>
+                <div class="violations__percent violations__percent--improper-clothing">4%</div>
+            </div>
+            <div class="violations__legend-item">
+                <div class="violations__color violations__color--other"></div>
+                <div class="violations__text">Остальное</div>
+                <div class="violations__count">2401</div>
+                <div class="violations__percent violations__percent--other">10%</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
