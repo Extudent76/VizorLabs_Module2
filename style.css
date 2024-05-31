@@ -1,0 +1,136 @@
+/* styles.css */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+dl, dt, dd, ol, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.schedule {
+    margin-right: 20px;
+}
+
+.schedule__title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.schedule__checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.schedule__checkbox-input {
+    margin-right: 8px;
+}
+
+span {
+    font-weight: bold;
+    color: #5b5b5b;
+}
+
+.card {
+    border: 2px solid #c3c3c3;
+    padding: 30px 20px 20px 20px;
+    border-radius: 8px;
+    width: 540px;
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: bold;
+}
+
+.card__button {
+    background-color: #fff;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.card__button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.card__selection-info {
+    color: #666;
+}
+
+.card__toggle {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.card__toggle-input {
+    display: none;
+}
+
+.card__toggle-label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.card__toggle-label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.card__toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+
+.card__toggle-input:checked + .card__toggle-label::before {
+    background-color: #007bff;
+}
+
+.card__toggle-input:checked + .card__toggle-label::after {
+    left: 18px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="schedule__title">График отправки</h2>
+    <div class="container">
+        <div class="schedule">
+            <div class="schedule__checkbox">
+                <input type="checkbox" id="send-now" class="schedule__checkbox-input">
+                <label for="send-now" class="schedule__checkbox-label">Сразу</label>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__header">
+                <h3 class="card__title">Источники <br> и события</h3>
+                <button class="card__button">+ Камеры и объекты</button>
+                <div class="card__selection-info">Выбрано <span>0 источника/0 события</span></div>
+            </div>
+            <div class="card__toggle">
+                <input type="checkbox" id="toggle" class="card__toggle-input">
+                <label for="toggle" class="card__toggle-label">Только подтверждённые нарушения</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
