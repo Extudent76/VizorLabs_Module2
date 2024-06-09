@@ -7,25 +7,95 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2 class="schedule__title">График отправки</h2>
     <div class="container">
-        <div class="schedule">
+        <h1 class="schedule__title">График отправки</h1>
+        <fieldset  class="schedule__form card__immediately">
             <div class="schedule__checkbox">
                 <input type="checkbox" id="send-now" class="schedule__checkbox-input">
                 <label for="send-now" class="schedule__checkbox-label">Сразу</label>
             </div>
-        </div>
-        <div class="card">
-            <div class="card__header">
-                <h3 class="card__title">Источники <br> и события</h3>
-                <button class="card__button">+ Камеры и объекты</button>
-                <div class="card__selection-info">Выбрано <span>0 источника/0 события</span></div>
+            <div class="card">
+                <div class="card__header">
+                    <h3 class="card__header-title">Источники <br> и события</h3>
+                    <button class="card__button">+ Камеры и объекты</button>
+                    <div class="card__selection-info">Выбрано <span>0 источника/0 события</span></div>
+                </div>
+                <div class="card__toggle">
+                    <input type="checkbox" id="toggle" class="card__toggle-input">
+                    <label for="toggle" class="card__toggle-label">Только подтверждённые нарушения</label>
+                </div>
             </div>
-            <div class="card__toggle">
-                <input type="checkbox" id="toggle" class="card__toggle-input">
-                <label for="toggle" class="card__toggle-label">Только подтверждённые нарушения</label>
+        </fieldset>
+        <fieldset  class="schedule__form card__customize">
+            <div class="schedule__checkbox">
+                <input type="checkbox" id="send-now" class="schedule__checkbox-input">
+                <label for="send-now" class="schedule__checkbox-label">Настраиваемый</label>
             </div>
-        </div>
+            <div class="card">
+                <h2 class="card__title">График №1</h2>
+                <div class="card__header">
+                    <h3 class="card__header-title">Источники <br> и события</h3>
+                    <button class="card__button">+ Камеры и объекты</button>
+                    <div class="card__selection-info">Выбрано <span>0 источника/0 события</span></div>
+                </div>
+                <div class="card__schedule">
+                    <label class="card__header-title">Расписание</label>
+                    <div class="card__schedule-days">
+                      <label class="card__schedule-day">
+                        <input type="checkbox" name="day" value="Пн" />
+                        Пн
+                      </label>
+                      <label class="card__schedule-day">
+                        <input type="checkbox" name="day" value="Вт" />
+                        Вт
+                      </label>
+                      <label class="card__schedule-day">
+                        <input type="checkbox" name="day" value="Ср" />
+                        Ср
+                      </label>
+                      <label class="card__schedule-day">
+                        <input type="checkbox" name="day" value="Чт" />
+                        Чт
+                      </label>
+                      <label class="card__schedule-day">
+                        <input type="checkbox" name="day" value="Пт" />
+                        Пт
+                      </label>
+                      <label class="card__schedule-day">
+                        <input type="checkbox" name="day" value="Сб" />
+                        Сб
+                      </label>
+                      <label class="card__schedule-day">
+                        <input type="checkbox" name="day" value="Вс" />
+                        Вс
+                      </label>
+                    </div>
+                    <fieldset class="card__schedule-time">
+                      <legend>Время</legend>
+                      <input
+                        class="card__schedule-time-input"
+                        type="time"
+                        value="00:00"
+                      />
+                    </fieldset>
+                </div>
+                <div class="card__toggle">
+                    <input type="checkbox" id="toggle_2" class="card__toggle-input">
+                    <label for="toggle_2" class="card__toggle-label">Только подтверждённые нарушения</label>
+                </div>
+            </div>
+        </fieldset>
+        <button type="button" class="card__delete-btn">
+            <svg class="delete__btn" width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17" stroke="#C0C2CE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button type="button" class="card__calendar-btn">
+            <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 10H21M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#A2D1AB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Добавить график
+        </button>
     </div>
 </body>
 </html>

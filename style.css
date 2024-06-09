@@ -1,7 +1,9 @@
-/* styles.css */
-html, body, div, span,
+
+fieldset, html, body, div, span, input, svg, button
 h1, h2, h3, h4, h5, h6, p,
 dl, dt, dd, ol, ul, li {
+    border: none;
+    outline: none;
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,28 +16,53 @@ footer, header, menu, nav, section {
     display: block;
 }
 
+button {
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    display: flex;
-    align-items: flex-start;
-}
-
-.schedule {
-    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 200px 550px 20px;
+    grid-template-rows: 30px auto auto 30px;
+    grid-template-areas:
+        "title title title"
+        "card__immediately card__immediately ."
+        "card__customize card__customize trash"
+        ". calendar .";
+    gap: 12px;
+    padding: 25px;
 }
 
 .schedule__title {
-    margin-bottom: 8px;
     font-size: 20px;
     font-weight: bold;
 }
 
-.schedule__checkbox {
+.schedule__form {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    border: none;
+}
+
+.card__immediately {
+    grid-area: card__immediately;
+}
+
+.card__customize {
+    grid-area: card__customize;
 }
 
 .schedule__checkbox-input {
@@ -44,51 +71,60 @@ body {
 
 span {
     font-weight: bold;
-    color: #5b5b5b;
 }
 
 .card {
-    border: 2px solid #c3c3c3;
-    padding: 30px 20px 20px 20px;
+    display: flex;
+    width: 64%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #bdbdbd;
     border-radius: 8px;
-    width: 540px;
+    padding: 30px
+}
+
+.card__title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #C0C2CE;
 }
 
 .card__header {
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
     align-items: center;
 }
 
-.card__title {
+.card__header-title {
     margin: 0;
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 14px;
+    line-height: 18px;
     font-weight: bold;
 }
 
 .card__button {
     background-color: #fff;
-    color: #0056b3;
-    border: 2px solid #0056b3;
+    color: #5091DD;
+    border: 2px solid #5091DD;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 .card__button:hover {
-    background-color: #0056b3;
+    background-color: #5091DD;
     color: #fff;
 }
 
 .card__selection-info {
-    color: #666;
+    font-size: 12px;
+    color: #C0C2CE;
 }
 
 .card__toggle {
     display: flex;
     align-items: center;
-    margin-top: 16px;
 }
 
 .card__toggle-input {
@@ -133,4 +169,67 @@ span {
 
 .card__toggle-input:checked + .card__toggle-label::after {
     left: 18px;
+}
+
+.card__schedule-days {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.card__schedule-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    min-height: 30px;
+    background-color: #C0C2CE;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card__schedule-day input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+.card__schedule {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+.card__schedule-time {
+    border-radius: 5px;
+    border: 1px solid #C0C2CE;
+    font-size: 12px;
+    color: #bdbdbd;
+    padding: 2px;
+}
+  
+.card__schedule-time-input {
+    padding: 0 10px;
+}
+
+.card__delete-btn {
+    grid-area: trash;
+    align-self: start;
+}
+
+.card__calendar-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    grid-area: calendar;
+    background-color: #fff;
+    color: #A2D1AB;
+    border: 2px solid #A2D1AB;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-right: auto;
+    font-size: 12px;
 }
